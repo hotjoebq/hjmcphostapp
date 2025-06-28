@@ -1,0 +1,51 @@
+{
+    "python.defaultInterpreterPath": "./venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.lintOnSave": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["--line-length=88"],
+    "python.sortImports.args": ["--profile", "black"],
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/*.pyo": true,
+        "**/*.pyd": true,
+        "**/.Python": true,
+        "**/build": true,
+        "**/develop-eggs": true,
+        "**/dist": true,
+        "**/downloads": true,
+        "**/eggs": true,
+        "**/.eggs": true,
+        "**/lib": true,
+        "**/lib64": true,
+        "**/parts": true,
+        "**/sdist": true,
+        "**/var": true,
+        "**/wheels": true,
+        "**/*.egg-info": true,
+        "**/.installed.cfg": true,
+        "**/*.egg": true,
+        "**/MANIFEST": true
+    },
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": false,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}"
+    }
+}

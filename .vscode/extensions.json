@@ -1,0 +1,16 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-python.pylint",
+        "ms-python.debugpy",
+        "ms-vscode.vscode-json",
+        "redhat.vscode-yaml",
+        "ms-vscode.vscode-markdown",
+        "github.vscode-pull-request-github",
+        "ms-vscode.vscode-git-graph",
+        "ms-vscode.vscode-github-issue-notebooks"
+    ]
+}

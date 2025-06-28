@@ -1,0 +1,72 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run MCP Host Application",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "args": []
+        },
+        {
+            "name": "Run Remote MCP Client",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/clients/remote_client.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "Run SQL MCP Client",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/clients/sql_client.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "Run Internet MCP Client",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/clients/internet_client.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "Run SQL Server MCP",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/servers/sql_server_mcp.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "Run Internet MCP Server",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/servers/internet_mcp.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        }
+    ]
+}
