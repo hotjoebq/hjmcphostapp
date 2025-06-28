@@ -25,14 +25,7 @@ class InternetMCPClient:
     async def connect(self) -> bool:
         """Connect to Internet MCP server via stdio"""
         try:
-            logger.info("Starting Internet MCP server process...")
-            
-            self.process = await asyncio.create_subprocess_exec(
-                sys.executable, self.server_script_path,
-                stdin=asyncio.subprocess.PIPE,
-                stdout=asyncio.subprocess.PIPE,
-                stderr=asyncio.subprocess.PIPE
-            )
+            logger.info("Connecting to Internet MCP server via stdio...")
             
             server_params = StdioServerParameters(
                 command=sys.executable,
@@ -45,14 +38,13 @@ class InternetMCPClient:
             from mcp import ClientSession
             self.session = ClientSession(read_stream, write_stream)
             
+            await self.session.initialize()
+            
             logger.info("Successfully connected to Internet MCP server")
             return True
             
         except Exception as e:
             logger.error(f"Failed to connect to Internet MCP server: {e}")
-            if self.process:
-                self.process.terminate()
-                await self.process.wait()
             return False
     
     async def web_search(self, query: str, num_results: int = 10) -> Dict[str, Any]:

@@ -25,14 +25,7 @@ class SQLMCPClient:
     async def connect(self) -> bool:
         """Connect to SQL MCP server via stdio"""
         try:
-            logger.info("Starting SQL MCP server process...")
-            
-            self.process = await asyncio.create_subprocess_exec(
-                sys.executable, self.server_script_path,
-                stdin=asyncio.subprocess.PIPE,
-                stdout=asyncio.subprocess.PIPE,
-                stderr=asyncio.subprocess.PIPE
-            )
+            logger.info("Connecting to SQL MCP server via stdio...")
             
             server_params = StdioServerParameters(
                 command=sys.executable,
@@ -45,14 +38,13 @@ class SQLMCPClient:
             from mcp import ClientSession
             self.session = ClientSession(read_stream, write_stream)
             
+            await self.session.initialize()
+            
             logger.info("Successfully connected to SQL MCP server")
             return True
             
         except Exception as e:
             logger.error(f"Failed to connect to SQL MCP server: {e}")
-            if self.process:
-                self.process.terminate()
-                await self.process.wait()
             return False
     
     async def connect_to_database(self, server: str, database: str, username: str = None, password: str = None) -> Dict[str, Any]:
