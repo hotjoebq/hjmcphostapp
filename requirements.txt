@@ -1,0 +1,7 @@
+mcp
+aiohttp
+websockets
+pyodbc
+requests
+pydantic
+typing-extensions

@@ -1,0 +1,33 @@
+{
+  "application": "MCP Host Application",
+  "timestamp": "2024-01-01T00:00:00Z",
+  "clients": [
+    {
+      "client": "remote",
+      "tests": [
+        {
+          "test": "connection",
+          "status": "failed"
+        }
+      ]
+    },
+    {
+      "client": "sql",
+      "tests": [
+        {
+          "test": "connection",
+          "status": "failed"
+        }
+      ]
+    },
+    {
+      "client": "internet",
+      "tests": [
+        {
+          "test": "connection",
+          "status": "failed"
+        }
+      ]
+    }
+  ]
+}
